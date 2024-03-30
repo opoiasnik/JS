@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="leftHeader">
+            To Do List
+        </div>
+        <div class="container">
+            <button class="addButton">Add</button>
+            <button class="rightHeader">
+                Reset
+            </button>
+        </div>
+    </header>
+
+    <div class="formBackground" style="display: none;">
+            <form action="" class="form">
+                <div>
+
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" id="description">
+                </div>
+                <div>
+
+                    <label for="date">Date: </label>
+                    <input type="date" name="date" id="date">
+                </div>
+                
+                <button class="submitButton">Submit</button>
+            </form>
+    </div>
+
+    <main>
+        <div class="headerMain">
+            <ul class="headerMainList">
+                <li>
+                    Name
+                </li>
+                <li>
+                    Description
+                </li>
+                <li>
+                    Date
+                </li>
+                <li>
+                    Priority
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
