@@ -1,0 +1,16 @@
+.container{
+    width: 700px;
+    height: 500px;
+    margin-left: 25%;
+    border: 1px solid black;
+}
+
+#input{
+    margin-left: 30%;
+    margin-top: 100px;
+}
+
+.cityText{
+    margin-left: 50%;
+    margin-top: 100px;
+}
