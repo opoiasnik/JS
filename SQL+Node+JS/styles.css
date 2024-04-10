@@ -1,0 +1,88 @@
+.div1, .div2, .div3, .div4, .div5{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(245, 174, 61);
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+}
+
+ .div5:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+}
+
+.div1:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+}
+
+.div2:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+}
+
+.div3:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+}
+
+.div4:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+}
+.addVozidloButton{
+    display: none;
+}
+
+
+.deleteVozidlo{
+    display: none;
+
+}
+
+.deleteVozidloButton{
+    display: none;
+    
+}
+.addVozidlo{
+    width: 650px;
+    display: none;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+form div{
+    margin-bottom: 20px;
+}
+td{
+   width: 200px;
+}
+table{
+    display: none;
+    text-align: center;
+}
+
+
+.backButton{
+    display: none;
+    margin-top: 50px;
+}
+.container{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    
+}
+
+
+@keyframes scaleAnimation {
+    0%{
+       transform:  scale(1) ;
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
