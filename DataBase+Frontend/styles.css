@@ -1,0 +1,371 @@
+body {
+    /* background-image: url('pexels-pixabay-459277.jpg'); */
+    background-size: cover;
+    background-attachment: fixed; 
+    font-family: 'Arial', sans-serif;
+   /* background-color: rgb(0, 0, 0, 0.8); */
+   background-image: url('giphy.gif');
+}
+
+table{
+   
+ /* border-radius: 15px; */
+ margin-left: auto;    /* Автоматический отступ слева */
+ margin-right: auto;   
+    font-size: 20px;
+    box-shadow: 10px black;
+    background-color: rgb(165, 162, 162);
+    font-weight: 500;
+}
+ td, th{
+    margin-bottom: 10px;
+    background-color: white;
+    /* border-radius: 10px 10px 0px 0px; */
+    width: 50px;
+    
+}
+/* button:hover{
+    transform: scale(1.1);
+} */
+.addCestujuciButton, .deleteCestujuciButton, .addRezervaciaButton,.deleteRezervaciaButton{
+    display: none;
+}
+.buttonContainer{
+    margin-left: 70%;
+    margin-bottom: 30px;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+.div1, .div2, .div3, .div4, .div5, .div6, .div7 {
+    height: 50px;
+    width: 500px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 35%;
+  
+}
+
+
+
+
+
+
+
+ .div5:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.div1:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.div2:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.div3:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.div4:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.div6:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.div7:hover{
+    animation: scaleAnimation 1s ;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.addVozidloButton{
+    display: none;
+    height: 40px;
+    
+    /* background-color: rgba(212, 193, 171, 0.9); */
+   
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; /* Заглавные буквы */
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #e6e6e6, #bfbfbf);
+    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    background: linear-gradient(145deg, #d9d9d9, #b3b3b3);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px); /* Небольшой сдвиг вниз при нажатии */
+}
+
+
+aside{
+    background-color: rgb(255, 255, 255, 0.8);
+   
+}
+
+.deleteVozidlo{
+    display: none;
+    width: 400px;
+    display: none;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    /* border-radius: 10px; */
+    background-color: rgb(229, 229, 229);
+    padding-top: 10px;
+    margin-left: 29%;
+    padding-left:5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+
+}
+/* .deleteVozidlo input{
+    width: 80%;
+ } */
+
+.deleteVozidloButton{
+    display: none;
+    height: 40px;
+    /* background-color: rgba(212, 193, 171, 0.9); */
+   
+}
+.addVozidlo{
+    width: 400px;
+    display: none;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    /* border-radius: 10px; */
+    background-color: rgb(229, 229, 229);
+    padding-top: 10px;
+    margin-left: 29%;
+    padding-left:5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+/* .addVozidlo input{
+   width: 80%;
+} */
+form div{
+    margin-bottom: 20px;
+}
+td{
+   width: 200px;
+}
+table{
+    display: none;
+    text-align: center;
+}
+
+
+.backButton{
+    display: none;
+    /* background-color: rgba(212, 193, 171, 0.9); */
+    
+   
+}
+.container{
+    width: 100%;
+    /* display: flex;
+    justify-content: space-around; */
+    /* margin-top: 100px; */
+    
+}
+#vyrobcaCount, #yearCount, #servisyCount, #zamestnanecCount{
+    display: none;
+    
+}
+aside{
+    background-color: rgb(229, 229, 229);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    
+    
+}
+
+.select {
+    position: absolute;
+    top: -1350px;  /* Изначальная позиция, находится выше видимой области */
+    left: 50%;    /* Центрирование по горизонтали */
+    transform: translateX(-50%) rotate(0deg); /* Начальное состояние для вращения */
+    width: 150px;
+    height: 70px;
+    margin-top: 250px; /* Отступ сверху, чтобы не прилипала к верху страницы */
+    font-weight: bold;
+    animation: slideDownSpin 2s forwards; /* Объединённая анимация сдвига и вращения */
+}
+
+@keyframes slideDownSpin {
+    0% { top: -1350px; transform: translateX(-50%) rotate(0deg); } /* Начальная позиция и угол вращения */
+    100% { top: 150px; transform: translateX(-50%) rotate(1800deg); } /* Конечная позиция ниже и 5 оборотов */
+}
+
+
+
+/* button:hover{
+    background-color: rgb(43, 43, 43);
+} */
+.countContainer{
+    /* display: flex; */
+}
+.countContainer button{
+ 
+    margin-top: 13px;
+}
+.sideBar{
+    width: 250px;
+    /* border: 1px solid black; */
+}
+
+aside{
+    display: none;
+}
+
+
+.asideFrom{
+    border: 0px 0px 0px 1px;
+}
+.show{
+    border-radius: 0px 10px 10px 0px;
+    height: 100px;
+}
+.show{
+    display: none;
+}
+#addZamestnanecButton, #deleteZamestnanecButton, #addServisButton,#deleteServisButton{
+    display: none;
+    border-radius: 10px;
+} 
+.addServis{
+    width: 400px;
+    display: none;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    /* border-radius: 10px; */
+    background-color: rgb(229, 229, 229);
+    padding-top: 10px;
+    margin-left: 29%;
+    padding-left:5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+/* .addServis input{
+   width: 80%;
+} */
+.deleteServis, .addZamestnanec, .deleteZmestnanec, .addCestujuciForm, .deleteCestujuciForm, .addRezervaciaForm, .deleteRezervaciaForm{
+    width: 400px;
+    display: none;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
+    /* border-radius: 10px; */
+    background-color: rgb(229, 229, 229);
+    padding-top: 10px;
+    margin-left: 29%;
+    padding-left:5%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+/* .deleteServis input, .addZamestnanec input, .deleteZmestnanec input, .addCestujuciForm input, .deleteCestujuciForm input, .addRezervaciaForm input, .deleteRezervaciaForm input{
+   width: 80%;
+} */
+.addZamestnanec, .addServis{
+    width: 300px;
+    display: none;
+}
+
+.deleteZmestnanec, .deleteServis{
+    width: 300px;
+    display: none;
+}
+
+th{
+    background-color: black;
+    color:white
+}
+
+form{
+    /* background-color: rgb(128, 128, 128, 0.8); */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* border-radius: 10px; */
+}
+input, select {
+    width: 90%; /* или другой процент, подходящий для вашего дизайна */
+    padding: 10px;
+    margin: 5px 0; /* отступ сверху и снизу для каждого элемента */
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    /* border: none; */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: #333;
+    font-size: 16px; /* размер шрифта, адаптируйте по вашему вкусу */
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: none; /* Убираем стандартный фокус браузера */
+    background: linear-gradient(145deg, #e6e6e6, #bfbfbf);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+input::placeholder {
+    color: #666; /* цвет текста подсказки в поле ввода */
+}
+
+@keyframes scaleAnimation {
+    0%{
+       transform:  scale(1) ;
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+@keyframes slideIn {
+    0%{
+        display: block;
+        transform: translateX(-100%);
+    }
+    100%{
+        display: block;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    0%{
+        display: block;
+        transform: translateX(0%);
+    }
+    100%{
+        /* display: none; */
+        transform: translateX(-100%);
+    }
+}

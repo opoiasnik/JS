@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <button class="show">></button>
+  <aside class="sideBar">
+    <button class="hide"><</button>
+    <h3>Criteria</h3>
+    <form action="" class="asideForm">
+
+      <label for="year">Year</label><br>
+      <input type="number" name="year" id="year">
+      
+      <label for="iveco">Manufacturer</label>
+      <input type="text" name="manufacturer" id="manufacturer" >
+     
+  
+  
+      <label for="">Zamestnanec ID</label>
+      <input type="number" name="zamestnanecID" id="zamestnanecID"  placeholder="1-8">   
+      
+    
+    </form>
+    <div class="countContainer">
+      <p>Count</p>
+     
+      <div class="countCriterias">
+        <button class="vyrobcaCount">Vyrobca</button>
+        <button class="yearCount">Year</button>
+        <button class="servisyCount">Servisy</button>
+        <button class="zamestnanecCount">Zamestnanec</button>
+        <input type="text" id="vyrobcaCount" name="vyrobcaCount">
+        <input type="number" id="yearCount" name="yearCount">
+        <input type="number" id="servisyCount" name="servisyCount">
+        <input type="number" id="zamestnanecCount" name="zamestnanecCount">
+        <p class="containerTxt">Count all by:</p>
+        <button class="vyrobcaCount2">Vyrobca</button>
+        <button class="yearCount2">Year</button>
+        <button class="servisyCount2">Servisy</button>
+        <button class="zamestnanecCount2">Zamestnanec</button>
+      </div>
+    </div>
+</aside>
+
+
+
+
+
+
+  <div id="data-container">
+    
+  </div>
+    <button class="select">Get Started</button>
+    <form action="" class="deleteVozidlo">
+      <label for="id">ID Vozidla</label>
+      <input type="number" name="id" id="id">
+      <button>Confirm</button>
+    </form>
+   <form action="" class="addVozidlo">
+    <div>
+      <label for="typ">Typ</label><br>
+      <input type="text" name="typ" id="typ" required>
+    </div>
+    <div>
+      
+   <label for="vyrobca">Vyrobca</label><br>
+   <!-- <input type="text" name="vyrobca" id="vyrobca" required> -->
+   <select name="vyrobca" id="vyrobca">
+    <option value="Iveco">Iveco</option>
+    <option value="Skoda">Skoda</option>
+    <option value="Mercedes">Mercedes</option>
+    <option value="Tatra">Tatra</option>
+    <option value="Siemens">Siemens</option>
+    <option value="MAN">MAN</option>
+    <option value="Volkswagen">Volkswagen</option>
+    <option value="Irisbus">Irisbus</option>
+   </select>
+    </div>
+    <div>
+      
+      <label for="rok">Rok vyroby</label><br>
+      <input type="number" name="rok" id="rok" required min="1935" max="2024">
+    </div>
+    <div>
+      
+      <label for="reg">Registracne cislo</label><br>
+      <input type="text" name="reg" id="reg" required>
+    </div>
+    <div>
+      
+      <label for="tech">Technicka Spravnost</label><br>
+      <input type="text" name="tech" id="tech" required>
+    </div>
+    <div>
+      
+      <label for="vlastnosti">JazdneVlastnosti</label><br>
+      <input type="text" name="vlastnosti" id="vlastnosti" required>
+    </div>
+    <div>
+      
+      <label for="poloha">Aktualna Poloha</label><br>
+      <input type="text" name="poloha" id="poloha" required>
+    </div>
+    <div>
+      
+      <label for="zamestnanec">Zamestnanec ID</label><br>
+      <input type="number" name="zamestnanec" id="zamestnanec" required>
+    </div>
+    <div>
+      
+      <label for="servis">Servis ID</label><br>
+      <input type="number" name="servis" id="servis" required>
+    </div>
+    <div>
+      
+      <label for="date">Datum Opravy</label><br>
+      <input type="date" name="date" id="date" required>
+    </div>
+    <div>
+      
+      <label for="">Naklady</label><br>
+      <input type="number" name="naklady" id="naklady" required>
+    </div>
+    <button>Confirm</button>
+   </form>
+
+   <form class="addZamestnanec">
+    <div>
+      <label for="p_meno">Meno</label><br>
+      <input type="text" name="p_meno" id="p_meno" required>
+    </div>
+    <div>
+      <label for="p_KontaktneUdaje">Kontaktne Udaje</label><br>
+      <input type="email" name="p_KontaktneUdaje" id="p_KontaktneUdaje" required>
+    </div>
+    <div>
+      <label for="p_Schopnosti">Schopnosti</label><br>
+      <input type="text" name="p_Schopnosti" id="p_Schopnosti" required>
+    </div>
+    <div>
+      <label for="p_Opravnenia">Opravnenia</label><br>
+      <input type="text" name="p_Opravnenia" id="p_Opravnenia" required>
+    </div>
+    <div>
+      <label for="p_VozidloID">Vozidlo ID</label><br>
+      <input type="number" name="p_VozidloID" id="p_VozidloID" required>
+    </div>
+      <button class="submitZamestnanec">Submit</button>
+   </form>
+
+
+   <form class="addServis">
+    <div>
+      <label for="p_NazovServisu">Nazov</label><br>
+      <input type="text" name="p_NazovServisu" id="p_NazovServisu" required>
+    </div>
+    <div>
+      <label for="p_Adresa">Address</label><br>
+      <input type="text" name="p_Adresa" id="p_Adresa" required>
+    </div>
+    <div>
+      <label for="p_VozidloID2">Vozidlo ID</label><br>
+      <input type="number" name="p_VozidloID2" id="p_VozidloID2" required>
+    </div>
+    <div>
+      <label for="p_DatumOpravy">Datum Opravy</label><br>
+      <input type="date" name="p_DatumOpravy" id="p_DatumOpravy" required>
+    </div>
+    <div>
+      <label for="p_Naklady">Naklady</label><br>
+      <input type="number" name="p_Naklady" id="p_Naklady" required>
+    </div>
+      <button class="submitServis">Submit</button>
+   </form>
+
+   <form class="deleteZmestnanec">
+    <label for="idd">ID Zamestnanca</label><br>
+      <input type="number" name="idd" id="idd" required>
+      <button class="deleteZmestnanecB">Confirm</button>
+   </form>
+   <form class="deleteServis">
+    <label for="iddd">ID Servisu</label><br>
+      <input type="number" name="iddd" id="iddd" required>
+      <button class="deleteServisB">Confirm</button>
+   </form>
+
+
+   <form class="addCestujuciForm">
+
+    <label for="menoC">Meno</label><br>
+    <input type="text" name="menoC" id="menoC" required>
+
+
+    <label for="contactC">Kontaktne Udaje</label><br>
+    <input type="number" name="contactC" id="contactC" required><br><br>
+    <button class="addCestujuciB">Submit</button>
+
+   </form>
+
+   <form class="deleteCestujuciForm">
+
+    <label for="idC">ID</label><br>
+    <input type="number" name="idC" id="idC" required><br><br>
+    <button class="deleteCestujuciB">Submit</button>
+
+
+   </form>
+
+   
+   <form class="addRezervaciaForm">
+
+    <label for="vozidloIdC">VozidloID</label><br>
+    <input type="number" name="vozidloIdC" id="vozidloIdC" required><br>
+
+    <label for="cestujuciIdC">Cestujuci ID</label><br>
+    <input type="number" name="cestujuciIdC" id="cestujuciIdC" required><br>
+
+    <label for="dateOdC">Cas Od</label><br>
+    <input type="date" name="dateOdC" id="dateOdC" required><br>
+
+
+    <label for="dateDoC">Cas Do</label><br>
+    <input type="date" name="dateDoC" id="dateDoC" required><br><br>
+
+    <button class="addRezervaciaB">Submit</button>
+   </form>
+
+
+
+   <form class="deleteRezervaciaForm">
+
+    <label for="idRC">ID</label><br>
+    <input type="number" name="idRC" id="idRC" required><br><br>
+
+    <button class="deleteRezervaciaB">Submit</button>
+   </form>
+
+   <div class="buttonContainer">
+    <button class="addCestujuciButton">Add cestujuci</button>
+    <button class="deleteCestujuciButton">Delete cestujuci</button>
+    <button class="addRezervaciaButton">Add rezervacia</button>
+     <button class="deleteRezervaciaButton">Delete rezervacia</button>
+     <button class="addVozidloButton">Add vozidlo</button>
+     <button class="deleteVozidloButton">Delete vozidlo</button>
+     <button id="addZamestnanecButton">Add zamestnanec</button>
+     <button id="deleteZamestnanecButton">Delete zamestnanec</button>
+     <button id="addServisButton">Add servis</button>
+     <button id="deleteServisButton">Delete servis</button>
+     <button class="viewReservationsButton">View rezervations</button>
+
+     <button class="backButton">Back</button>
+   </div>
+    <div class="container">
+      
+      <table>
+       
+      </table>
+
+    
+    </div>
+
+  <script type="module" src="app.js"></script>
+  <script type="module" src="zamestnanecEvent.js"></script>
+  <script type="module" src="deleteDataForm.js"></script>
+  <script type="module" src="addDataForm.js"></script>
+  <script type="module" src="showAside.js"></script>
+  <script type="module" src="hideAside.js"></script>
+  <script type="module" src="yearEvent.js"></script>
+  <script type="module" src="searchVechicles.js"></script>
+  <script type="module" src="servisesEvent.js"></script>
+  <script type="module" src="addCustujuci.js"></script>
+  
+</body>
+</html>
