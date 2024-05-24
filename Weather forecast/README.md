@@ -86,6 +86,6 @@ submit.addEventListener('click', async function() {
     }
 });
 ```
-![image](https://github.com/opoiasnik/JS/assets/122808904/e2c53dd2-740d-4b91-8c77-eeccf40b6c7b)
-![image](https://github.com/opoiasnik/JS/assets/122808904/d088bdcb-3717-4842-8974-86880d4ea959)
+![image](https://github.com/opoiasnik/JS/assets/122808904/63156533-24ed-457a-bebb-bde89184c906)
+![image](https://github.com/opoiasnik/JS/assets/122808904/8242bae6-6b7c-4607-8181-0439d1dcab28)
 
