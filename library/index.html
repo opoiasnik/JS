@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <button class="addBook">Add book</button>
+    <div class="container">
+        <button class="addBook">Add Book</button>
         <form action="" method="" class="form">
-            <fieldset class = 'fieldset'>
-                
+            <fieldset class='fieldset'>
                 <label for="author">Author</label>
                 <input type="text" name="author" id="author">
                 <label for="title">Title</label>
@@ -19,29 +19,31 @@
                 <label for="pages">Pages</label>
                 <input type="number" name="pages" id="pages">
                 <div class="buttons">
-
                     <button class="submit">Submit</button>
                     <button class="cancel">Cancel</button>
                 </div>
             </fieldset>
         </form>
         <table class="table">
-            <th>Number</th>
-            <th>Author</th>
-            <th>Title</th>
-            <th>Pages</th>
-            <th>Read/No read</th>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>ya</td>
-                <td>ya</td>
-                <td>ya</td>
-                <td><input type="checkbox" class="checkbox"></td>
-                
-            </tr>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Pages</th>
+                    <th>Read/No read</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ya</td>
+                    <td>ya</td>
+                    <td>ya</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </tbody>
         </table>
-  
+    </div>
 </body>
 </html>
