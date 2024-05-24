@@ -56,7 +56,7 @@ To get a local copy up and running, follow these steps:
 
 ## File Structure
 ```
-your-repository/
+
 ├── index.html
 ├── styles.css
 ├── script.js
