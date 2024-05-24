@@ -1,4 +1,4 @@
-Sure, here's how you can write the documentation for your project using GitHub Markdown.
+
 
 ### Project Documentation
 
