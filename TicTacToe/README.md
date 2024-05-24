@@ -90,9 +90,7 @@ The JavaScript file contains the main logic for the game, including event listen
 - `Restart` button: Resets the game board and removes animations.
 - `End` button: Reloads the page and resets scores.
 
-## License
 
-This project is licensed under the MIT License.
 
 ![image](https://github.com/opoiasnik/JS/assets/122808904/44e5f007-743a-47f8-8b67-8f24118a518f)
 ![image](https://github.com/opoiasnik/JS/assets/122808904/ecfb1a14-2da6-485a-ad1d-4fe678c28d8c)
