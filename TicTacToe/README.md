@@ -94,6 +94,5 @@ The JavaScript file contains the main logic for the game, including event listen
 
 This project is licensed under the MIT License.
 
----
+![image](https://github.com/opoiasnik/JS/assets/122808904/44e5f007-743a-47f8-8b67-8f24118a518f)
 
-Feel free to contribute to the project by submitting issues or pull requests. For any questions or feedback, please contact the project maintainer.
