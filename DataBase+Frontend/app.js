@@ -1,16 +1,16 @@
-import { addDataFromForm, updateDisplay } from "./addDataForm.js"
-import { deleteDataFromForm } from "./deleteDataForm.js"
-import { showAside } from "./showAside.js";
-import { hideAside } from "./hideAside.js";
- import { yearEvent } from "./yearEvent.js";
-  import { searchByManufacturer } from "./manufacturerEvent.js";
- import { searchByEmployee } from "./zamestnanecEvent.js";
- import { searchByVehicle } from "./searchVechicles.js";
- import { searchByService } from "./servisesEvent.js";
- import { addCestujuci } from "./addCustujuci.js";
- import { deleteCestujuci } from "./addCustujuci.js";
- import { addRezervacia } from "./addRezervacia.js";
- import { deleteRezervacia } from "./addRezervacia.js";
+import { addDataFromForm } from "./Events/addDataForm.js";
+import { deleteDataFromForm } from "./Events/deleteDataForm.js";
+import { showAside } from "./AsideBar/showAside.js";
+import { hideAside } from "./AsideBar/hideAside.js";
+ import { yearEvent } from "./Events/yearEvent.js";
+  import { searchByManufacturer } from "./Events/manufacturerEvent.js";
+ import { searchByEmployee } from "./Events/zamestnanecEvent.js";
+ import { searchByVehicle } from "./Events/searchVechicles.js";
+ import { searchByService } from "./Events/servisesEvent.js";
+ import { addCestujuci } from "./Events/addCustujuci.js";
+ import { deleteCestujuci } from "./Events/addCustujuci.js";
+ import { addRezervacia } from "./Events/addRezervacia.js";
+ import { deleteRezervacia } from "./Events/addRezervacia.js";
  class Cestujuci{
     constructor(array){
         this.array = array
@@ -671,7 +671,7 @@ document.addEventListener('DOMContentLoaded', async function(){
             priradenieVozidlaDiv.className = 'div5'
             cestujuciDiv.className = 'div6'
             rezervacieDiv.className = 'div7'
-            bodyMain.style.background = `url('v1016-a-08.jpg')`
+            bodyMain.style.background = `url('./Images/v1016-a-08.jpg')`
             viewReservationsButton.style.display = 'none'
             vozidlaDiv.textContent = 'Vozidla'
             servisneZaznamyDiv.textContent = 'Servisne Zaznamy'

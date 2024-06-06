@@ -4,7 +4,7 @@ body {
     background-attachment: fixed; 
     font-family: 'Arial', sans-serif;
    /* background-color: rgb(0, 0, 0, 0.8); */
-   background-image: url('giphy.gif');
+   background-image: url('./Images/giphy.gif');
 }
 
 table{
