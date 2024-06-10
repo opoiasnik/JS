@@ -11,81 +11,68 @@ import { hideAside } from "./AsideBar/hideAside.js";
  import { deleteCestujuci } from "./Events/addCustujuci.js";
  import { addRezervacia } from "./Events/addRezervacia.js";
  import { deleteRezervacia } from "./Events/addRezervacia.js";
- class Cestujuci{
-    constructor(array){
-        this.array = array
+
+
+ class Entity {
+    constructor(array, data, selected, mainEntity) {
+        this.array = array;
+        this.data = data;
+        this.selected = selected;
+        this.mainEntity = mainEntity;
     }
 
-     async update(table,arrayOfDivs,backButton ) {
-        let url = 'http://localhost:3000/data';
+    async update(table, arrayOfDivs, backButton) {
+        let url = `http://localhost:3000/${this.data}`;
         let respond = await addRespond(url);
-        this.array = respond.Cestujuci;
-        console.log('aray:',arrayOfDivs)
+        console.log(respond)
+        this.array = respond[this.mainEntity];
+        console.log(this.array)
         arrayOfDivs.forEach(element => {
             element.style.display = 'none'
         });
         table.innerHTML = ''; 
-       
+    
     
         let content = this.array;
         let tableHeader = `<tr>
-                              <th>Cestujuci ID</th>
-                              <th>Meno</th>
-                              <th>Kontaktne Udaje</th>
+                             ${this.selected.map(element => {
+                               return  `<th>${element}</th>`
+                             }).join('')}
                            </tr>`;
+        
         table.innerHTML = tableHeader; 
     backButton.style.display = 'block'
         content.forEach((element) => {
             let row = `<tr>
-                          <td>${element.CestujuciID}</td>
-                          <td>${element.Meno}</td>
-                          <td>${element.KontaktneUdaje}</td>
+                            ${this.selected.map(key => {
+                                    return `<td>${element[key]}</td>`
+                            }).join('')}
                        </tr>`;
             table.innerHTML += row; 
         });
         table.style.display = 'table'; 
-     }
+     
+    }
+}
+
+ class Cestujuci extends Entity{
+    constructor(array){
+        super(array, 'data', ['CestujuciID', 'Meno', 'KontaktneUdaje'], 'Cestujuci')
+        
+    }
+    
+   
     
 }
 
 
-class Rezervacie{
+class Rezervacie extends Entity{
     constructor(array){
-        this.array = array
+        super(array, 'data', ['RezervaciaID', 'VozidloID', 'CestujuciID', 'DatumCasOd', 'DatumCasDo'], 'Rezervacie')
+        
     }
 
-     async update(table,arrayOfDivs,backButton ) {
-        let url = 'http://localhost:3000/data';
-        let respond = await addRespond(url);
-        this.array = respond.Rezervacie;
-        arrayOfDivs.forEach(element => {
-            element.style.display = 'none'
-        });
-        table.innerHTML = ''; 
-
-    
-        let content = this.array;
-        let tableHeader = `<tr>
-                              <th>Rezervacia ID</th>
-                              <th>Vozidlo ID</th>
-                              <th>Cestujuci ID</th>
-                              <th>Datum Cas Od</th>
-                              <th>Datum Cas Do</th>
-                           </tr>`;
-        table.innerHTML = tableHeader; 
-    backButton.style.display = 'block'
-        content.forEach((element) => {
-            let row = `<tr>
-                          <td>${element.RezervaciaID}</td>
-                          <td>${element.VozidloID}</td>
-                          <td>${element.CestujuciID}</td>
-                          <td>${element.DatumCasOd}</td>
-                          <td>${element.DatumCasDo}</td>
-                       </tr>`;
-            table.innerHTML += row; 
-        });
-        table.style.display = 'table'; 
-     }
+     
     
 }
 
@@ -136,149 +123,36 @@ class Vozidla{
     
 }
 
-class ServisneZaznamy{
+class ServisneZaznamy extends Entity{
     constructor(array){
-        this.array = array
+        super(array, 'data', ['ZaznamID', 'VozidloID', 'ServisID', 'DatumOpravy', 'Naklady'], 'ServisneZaznamy')
+        
     }
-
-    async update(arrayOfDivs, backButton, table){
-        let url = 'http://localhost:3000/data';
-        let respond = await addRespond(url);
-        this.array = respond.ServisneZaznamy;
-        arrayOfDivs.forEach(element => {
-            element.style.display = 'none'
-        });
-        table.innerHTML = ''; 
-        backButton.style.display = 'block'
-        let content = this.array;
-        let tableHeader = `<tr>
-                              <th>Zaznam ID</th>
-                              <th>Vozidlo ID</th>
-                              <th>Servis ID </th>
-                              <th>Datum Opravy</th>
-                              <th>Naklady</th>
-                           </tr>`;
-        table.innerHTML = tableHeader; 
-    
-        content.forEach((element) => {
-            let row = `<tr>
-                          <td>${element.ZaznamID}</td>
-                          <td>${element.VozidloID}</td>
-                          <td>${element.ServisID}</td>
-                          <td>${element.DatumOpravy}</td>
-                          <td>${element.Naklady}</td>
-                       </tr>`;
-            table.innerHTML += row; 
-        });
-        table.style.display = 'table'; 
-    }
+   
 }
 
-class Servisy{
-    
+class Servisy extends Entity{
     constructor(array){
-        this.array = array
+        super(array, 'data', ['ServisID', 'NazovServisu', 'Adresa'], 'Servisy')
+        
     }
-
-    async update(arrayOfDivs, table, backButton){
-        let url = 'http://localhost:3000/data';
-        let respond = await addRespond(url);
-        this.array = respond.Servisy;
-        arrayOfDivs.forEach(element => {
-            element.style.display = 'none'
-        });
-        table.innerHTML = ''; 
-        backButton.style.display = 'block'
-        let content = this.array;
-        let tableHeader = `<tr>
-                              <th>Servis ID </th>
-                              <th>Nazov Servisu</th>
-                              <th>Adresa</th>
-                           </tr>`;
-        table.innerHTML = tableHeader; 
-    
-        content.forEach((element) => {
-            let row = `<tr>
-                          <td>${element.ServisID}</td>
-                          <td>${element.NazovServisu}</td>
-                          <td>${element.Adresa}</td>
-                       </tr>`;
-            table.innerHTML += row; 
-        });
-        table.style.display = 'table'; 
-    }
+  
 }
 
-class Zamestnanci{
+class Zamestnanci extends Entity{
     constructor(array){
-        this.array = array
+        super(array, 'data', ['ZamestnanecID', 'Meno', 'KontaktnéUdaje', 'Schopnosti', 'Opravnenia'], 'Zamestnanci')
+        
     }
-
-    async update(arrayOfDivs, backButton, table){
-        let url = 'http://localhost:3000/data';
-        let respond = await addRespond(url);
-        this.array = respond.Zamestnanci;
-        arrayOfDivs.forEach(element => {
-            element.style.display = 'none'
-        });
-        table.innerHTML = ''; 
-        backButton.style.display = 'block'
-        let content = this.array;
-        let tableHeader = `<tr>
-                              <th>Zamestnanec ID</th>
-                              <th>Meno</th>
-                              <th>Kontaktné Udaje</th>
-                              <th>Schopnosti</th>
-                              <th>Opravnenia</th>
-                           </tr>`;
-        table.innerHTML = tableHeader; 
     
-        content.forEach((element) => {
-            let row = `<tr>
-                          <td>${element.ZamestnanecID}</td>
-                          <td>${element.Meno}</td>
-                          <td>${element.KontaktnéUdaje}</td>
-                          <td>${element.Schopnosti}</td>
-                          <td>${element.Opravnenia}</td>
-                       </tr>`;
-            table.innerHTML += row; 
-        });
-        table.style.display = 'table'; 
-    }
 }
 
-class PriradenieVozidla{
+class PriradenieVozidla extends Entity{
     constructor(array){
-        this.array = array
+        super(array, 'data', ['PriradenieID', 'VozidloID', 'ZamestnanecID'], 'PriradenieVozidla')
+        
     }
-
-    async update(arrayOfDivs, backButton, table){
-        let url = 'http://localhost:3000/data';
-        let respond = await addRespond(url);
-        this.array = respond.PriradenieVozidla;
-        arrayOfDivs.forEach(element => {
-            element.style.display = 'none'
-        });
-        table.innerHTML = ''; 
-        backButton.style.display = 'block'
-        let content = this.array;
-        let tableHeader = `<tr>
-                              <th>Priradenie ID</th>
-                              <th>Vozidlo ID</th>
-                              <th>Zamestnanec ID</th>
-                           </tr>`;
-        table.innerHTML = tableHeader; 
-    
-        content.forEach((element) => {
-            let row = `<tr>
-                          <td>${element.PriradenieID}</td>
-                          <td>${element.VozidloID}</td>
-                          <td>${element.ZamestnanecID}</td>
-                       </tr>`;
-            table.innerHTML += row; 
-        });
-        table.style.display = 'table'; 
-    }
+   
 }
 
 
@@ -288,6 +162,7 @@ class PriradenieVozidla{
 document.addEventListener('DOMContentLoaded', async function(){
    let url = 'http://localhost:3000/data';
     let respond = await addRespond(url);
+    console.log(respond)
     let table = document.querySelector('table') 
     let backButton = document.querySelector('.backButton')
     let formAddVozidlo = document.querySelector('.addVozidlo')
@@ -530,14 +405,14 @@ document.addEventListener('DOMContentLoaded', async function(){
 
 
         servisneZaznamyDiv.addEventListener('click', function(){
-           servisneZaznamy.update(arrayOfDivs, backButton, table)
+           servisneZaznamy.update(table, arrayOfDivs, backButton )
         })
 
         
 
 
         servisyDiv.addEventListener('click', function(){
-           servisy.update(arrayOfDivs, table, backButton)
+           servisy.update(table, arrayOfDivs,  backButton)
            addServisButton.style.display = 'block'
            deleteServisButton.style.display = 'block'
 
@@ -548,7 +423,7 @@ document.addEventListener('DOMContentLoaded', async function(){
 
 
         zamestnanciDiv.addEventListener('click', function(){
-           zamestnanci.update(arrayOfDivs, backButton, table)
+           zamestnanci.update(table,arrayOfDivs, backButton )
            addZamestnanecButton.style.display = 'block'
            deleteZamestnanecButton.style.display = 'block'
         })
@@ -593,7 +468,7 @@ document.addEventListener('DOMContentLoaded', async function(){
 
 
         priradenieVozidlaDiv.addEventListener('click', function(){
-          priradenieVozidla.update(arrayOfDivs, backButton, table)
+          priradenieVozidla.update(table,arrayOfDivs, backButton)
         })
 
 
