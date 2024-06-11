@@ -84,4 +84,5 @@ The JavaScript file contains the main logic for the task manager, including even
 - Each task has a delete icon to remove it from the list.
 - Clicking the delete icon removes the task from the array and updates the DOM.
 
-![image](https://github.com/opoiasnik/JS/assets/122808904/271b85ce-36a5-42a1-97ed-a0b43e83842c)
+![image](https://github.com/opoiasnik/JS/assets/122808904/f51083e5-2430-4bce-aace-35a2840eed33)
+
