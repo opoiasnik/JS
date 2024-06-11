@@ -1,175 +1,164 @@
-body{
+body {
     background-image: url('background.jpg');
+    background-size: cover;
     margin: 0 auto;
     max-width: 1920px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
 }
 
-header{
-    background-color: black;
-    opacity: 0.8;
+header {
+    background-color: rgba(0, 0, 0, 0.8);
     height: 180px;
-    color:white;
+    color: white;
     display: flex;
     justify-content: space-between;
-}
-
-.leftHeader{
-    font-size: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 50px;
-    margin-left: 100px;
-}
-
-.rightHeader{
-    font-size: 20px;
-    margin-right: 100px;
-    margin-top: 50px;
-    width:120px;
-    height: 60px;
-    border-radius: 10px;
-
-}
-
-.addButton{
-    font-size: 20px;
-    margin-right: 100px;
-    margin-top: 50px;
-    width:120px;
-    height: 60px;
-    border-radius: 10px;
-
-}
-
-.headerMain{
-    color:white;
-    font-size: 25px;
-    width: 1100px;
-    margin-left: 20%;
-}
-
-.headerMainList{
-    display: flex;
-    justify-content: space-around;    
-    margin-top: 100px;
-    background-color:rgb(114, 99, 80);
-    border-radius: 10px;
-    height: 100px;
     align-items: center;
-    list-style-type: none;
-    
+    padding: 0 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-
-.headerMainList :nth-child(2){
-    width: 400px;
-    text-align: center;
+.leftHeader {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
 }
 
-.headerMainList li{
-    background-color: black ;
-    opacity: 0.5;
+.leftHeader i {
+    margin-right: 15px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.addButton, .rightHeader {
+    font-size: 20px;
+    width: 140px;
+    height: 60px;
     border-radius: 10px;
-    width:100px;
-    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ff9800;
+    color: white;
+    transition: background-color 0.3s;
 }
 
-.formBackground{
-    width:100%;
-    height:500px;
+.addButton:hover, .rightHeader:hover {
+    background-color: #e68900;
+}
+
+.formBackground {
+    width: 100%;
+    height: 500px;
     z-index: 2;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-   
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.form{
-    margin-left: 30%;
-    margin-top: 70px;
+.form {
     font-size: 25px;
     width: 600px;
-}
-
-.form div{
-    margin-bottom: 50px;
-    width: 600px;
-    background-color: rgb(114, 99, 80);
-    height: 60px;
-    padding-top: 15px;
+    background-color: rgba(255, 152, 0, 0.8);
+    padding: 30px;
     border-radius: 15px;
-    padding-left: 10%;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.form input{
-    height: 30px;
-    margin-left: 10%;
-    width:200px;
-    border-radius: 15px;
-}
-
-.submitButton{
-    width:100px;
-    height:40px;
-    border-radius: 15px;
-    font-size: 15px;
-}
-
-
-.mainList{
+.form div {
+    margin-bottom: 20px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;    
-    list-style-type: none;
-    background-color:rgb(114, 99, 80);
-    border-radius: 10px;
-    height: 100px;
+    justify-content: space-between;
     align-items: center;
-    padding: 0;
 }
 
-.mainList li{
-    
-    
-    
+.form label {
+    width: 30%;
 }
 
-.mainList :nth-child(2){
-    font-size: 15px;
-    width: 400px;
-    margin-left: 5%;
+.form input {
+    width: 65%;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    padding: 0 10px;
 }
 
-.mainList :nth-child(1){
-    width: 120px;
-    margin-left: 6%;
-    text-overflow:ellipsis;
+.submitButton {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.mainList :nth-child(3){
-    width: 125px;
-    margin-left: 5%;
+.submitButton:hover {
+    background-color: #43a047;
 }
 
-
-
-.upperImg, .downImg, .delete{
-    width:16px;
-    height: 16px;
+.headerMain {
+    color: white;
+    font-size: 25px;
+    width: 80%;
+    margin: 100px auto 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.upperImg{
-   margin-left: 6%;
+.headerRow, .taskRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    padding: 10px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.headerRow {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.taskRow {
+    background-color: rgba(255, 152, 0, 0.8);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.taskRow div {
+    padding: 10px;
+}
+
+.taskRow img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 @keyframes appearance {
-    0%{
+    0% {
         opacity: 0;
     }
-    
-    100%{
+    100% {
         opacity: 1;
     }
 }

@@ -7,19 +7,17 @@
    
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="script.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body>
     <header class="header">
         <div class="leftHeader">
-            To Do List
+            <i class="fas fa-list"></i> To Do List
         </div>
         <div class="container">
-            <button class="addButton">Add</button>
-            <button class="rightHeader">
-                Reset
-            </button>
+            <button class="addButton"><i class="fas fa-plus"></i> Add</button>
+            <button class="rightHeader"><i class="fas fa-redo"></i> Reset</button>
         </div>
     </header>
 
@@ -41,26 +39,19 @@
                     <input type="date" name="date" id="date">
                 </div>
                 
-                <button class="submitButton">Submit</button>
+                <button class="submitButton"><i class="fas fa-check"></i> Submit</button>
             </form>
     </div>
 
     <main>
         <div class="headerMain">
-            <ul class="headerMainList">
-                <li>
-                    Name
-                </li>
-                <li>
-                    Description
-                </li>
-                <li>
-                    Date
-                </li>
-                <li>
-                    Priority
-                </li>
-            </ul>
+            <div class="headerRow">
+                <div>Name</div>
+                <div>Description</div>
+                <div>Date</div>
+                <div>Priority</div>
+            </div>
+            <div class="taskContainer"></div>
         </div>
     </main>
 </body>
