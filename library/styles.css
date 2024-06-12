@@ -99,3 +99,64 @@ input {
     width: 20px;
     height: 20px;
 }
+/* Стили для настольных компьютеров и больших экранов */
+@media (min-width: 1024px) {
+    .container {
+        width: 60%; 
+    }
+
+    .form {
+        width: 60%; 
+    }
+}
+
+/* Стили для планшетов */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 75%; 
+    }
+
+    .form {
+        width: 80%; 
+    }
+}
+
+/* Стили для средних и малых мобильных устройств */
+@media (max-width: 767px) {
+    .container {
+        width: 90%; 
+        padding: 10px; 
+    }
+
+    .form {
+        width: 100%; 
+    }
+
+    .addBook {
+        width: 100%; 
+    }
+
+    input, .submit, .cancel {
+        width: calc(100% - 20px); 
+    }
+
+    .buttons {
+        flex-direction: column; 
+    }
+
+    .submit, .cancel {
+        width: 100%; 
+        margin-top: 10px; 
+    }
+}
+
+/* Стили для очень малых экранов */
+@media (max-width: 480px) {
+    label, input, .submit, .cancel {
+        font-size: 14px; 
+    }
+
+    .table th, .table td {
+        padding: 10px; 
+    }
+}

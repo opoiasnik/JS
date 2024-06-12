@@ -173,3 +173,82 @@ main{
         color:green;
     }
 }
+
+
+/* Стили для планшетов */
+@media (max-width: 1024px) {
+    .headerTxt {
+        margin-left: 35%; 
+    }
+
+    .mainContainer {
+        width: 400px; 
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    .mainContainer div div {
+        width: 120px;
+        height: 120px; 
+    }
+}
+
+/* Стили для больших мобильных устройств */
+@media (max-width: 768px) {
+    .headerTxt {
+        margin-left: 25%; 
+        font-size: 28px; 
+    }
+
+    .mainContainer {
+        width: 300px; 
+    }
+
+    .mainContainer div div {
+        width: 80px;
+        height: 80px; 
+    }
+
+    .xScore, .oScore {
+        font-size: 18px; 
+    }
+
+    .restart, .end {
+        width: 90px; 
+        font-size: 14px;
+    }
+}
+
+/* Стили для очень маленьких устройств */
+@media (max-width: 480px) {
+    .mainContainer div div {
+        width: 60px;
+        height: 60px; 
+    }
+    header {
+        height: 150px; 
+    }
+
+    .headerTxt {
+        margin-left: 20%; 
+        font-size: 22px; 
+    }
+
+    .mainContainer {
+        width: 280px; 
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+  
+
+    .xScore, .oScore {
+        font-size: 16px; 
+    }
+
+    .restart, .end {
+        width: 80px; 
+        font-size: 12px;
+    }
+}
+

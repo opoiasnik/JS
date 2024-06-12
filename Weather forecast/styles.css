@@ -53,3 +53,63 @@ button:hover {
 #weatherInfo {
     font-size: 1.2em;
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #input, button {
+        width: calc(100% - 20px);
+        padding: 8px;
+    }
+
+    #weatherIcon {
+        width: 80px;
+        height: 80px;
+    }
+
+    #weatherInfo {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    #input, button {
+        width: calc(100% - 10px);
+    }
+
+    #weatherIcon {
+        width: 70px;
+        height: 70px;
+    }
+
+    #weatherInfo {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    #input, button {
+        padding: 6px;
+    }
+
+    #weatherIcon {
+        width: 60px;
+        height: 60px;
+    }
+
+    #weatherInfo {
+        font-size: 13px;
+    }
+}
+

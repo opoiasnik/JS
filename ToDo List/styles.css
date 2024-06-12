@@ -162,3 +162,88 @@ header {
         opacity: 1;
     }
 }
+
+/* Медиа-запросы для планшетов */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .leftHeader, .container {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form {
+        width: 90%; /* Уменьшение ширины формы на планшетах */
+    }
+
+    .headerMain {
+        width: 90%; /* Уменьшение ширины основного контента */
+        margin: 50px auto;
+    }
+
+    .headerRow, .taskRow {
+        grid-template-columns: 1fr 2fr 1fr; /* Уменьшение количества колонок для упрощения отображения */
+    }
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .leftHeader {
+        font-size: 30px;
+    }
+
+    .addButton, .rightHeader {
+        font-size: 18px; 
+        width: 100px;
+        height: 50px;
+    }
+
+    .formBackground {
+        height: 100%; 
+    }
+
+    .form {
+        font-size: 20px; 
+        padding: 20px;
+        width: 80%; 
+    }
+
+    .headerMain {
+        font-size: 20px; 
+        width: 100%; 
+        margin: 20px auto;
+    }
+}
+
+/* Медиа-запросы для очень малых устройств */
+@media (max-width: 480px) {
+    .leftHeader {
+        font-size: 24px; 
+    }
+
+    .addButton, .rightHeader {
+        font-size: 16px; 
+        width: 90px; 
+        height: 45px;
+    }
+
+    .form {
+        font-size: 18px; 
+        width: 95%; 
+    }
+
+    .headerMain {
+        font-size: 18px; 
+        padding: 15px; 
+    }
+}
+
