@@ -664,7 +664,7 @@ function submitServisD() {
     });
 }
 function updateServisyTableD() {
-    let table = document.querySelector('table'); // Убедитесь, что это правильный селектор для вашей таблицы сервисов
+    let table = document.querySelector('table'); 
     let backButton = document.querySelector('.backButton');
     let arrayOfDivs = [];
 
@@ -680,13 +680,13 @@ function updateServisyTableD() {
 }
 function submitZamestnanecD() {
     // Получение ID сотрудника из формы
-    let zamestnanecID = document.querySelector('#idd').value; // Убедитесь, что ID соответствует ID в вашем HTML
+    let zamestnanecID = document.querySelector('#idd').value; 
 
     const body = {
         zamestnanecID: parseInt(zamestnanecID) // Преобразование в число для безопасной передачи
     };
 
-    fetch('http://localhost:3000/deleteZamestnanec', { // Убедитесь, что у вас правильный URL
+    fetch('http://localhost:3000/deleteZamestnanec', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -726,7 +726,7 @@ function submitServisF() {
         naklady: parseFloat(naklady) // Преобразование строки в число
     };
 
-    fetch('http://localhost:3000/addServis', { // Убедитесь, что у вас правильный URL
+    fetch('http://localhost:3000/addServis', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -751,7 +751,7 @@ function submitServisF() {
 
 // Функция для обновления таблицы сервисов
 function updateServisyTable() {
-    let table = document.querySelector('table'); // Убедитесь, что это правильный селектор для вашей таблицы сервисов
+    let table = document.querySelector('table'); 
     let backButton = document.querySelector('.backButton');
     let arrayOfDivs = [];
 
@@ -804,7 +804,7 @@ function submitZamestnanecF() {
     });
 }
 function updateZamestnanciTableD() {
-    let table = document.querySelector('table'); // Убедитесь, что это правильный селектор для вашей таблицы сотрудников
+    let table = document.querySelector('table'); 
     let backButton = document.querySelector('.backButton');
     let arrayOfDivs = [];
 
@@ -821,8 +821,8 @@ function updateZamestnanciTableD() {
 function updateZamestnanciTable() {
     // Скрываем форму и показываем таблицу
     document.querySelector('.addZamestnanec').style.display = 'none';
-    const table = document.querySelector('table'); // Убедитесь, что это правильный селектор для вашей таблицы сотрудников
-    const backButton = document.querySelector('.backButton'); // Кнопка "Назад"
+    const table = document.querySelector('table'); 
+    const backButton = document.querySelector('.backButton');
     let arrayOfDivs = []; // Массив divs, если нужно скрыть другие элементы
 
     // Создаем экземпляр класса для сотрудников и вызываем метод обновления
